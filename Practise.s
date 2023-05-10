@@ -1,8 +1,8 @@
 .data
 msg: .asciiz "Enter an integer number: ";
-pos: .asciiz "\nThis number is positive";
-neg: .asciiz "\nThis number is negative";
-zero: .asciiz "\nNeither positive nor negative";
+posnum: .asciiz "\nThis number is positive";
+negnum: .asciiz "\nThis number is negative";
+zeronum: .asciiz "\nNeither positive nor negative";
 
 .text
 
@@ -26,19 +26,19 @@ bgt $t0, $t5, poscase
 
 blt $t0, $t5, negcase
 
-la $a0, zero
+la $a0, zeronum
 li $v0, 4
 syscall
 j exit
 
 poscase:
-la $a0, pos
+la $a0, posnum
 li $v0, 4
 syscall
 j exit
 
 negcase:
-la $a0, neg
+la $a0, negnum
 li $v0, 4
 syscall
 j exit
