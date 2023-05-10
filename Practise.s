@@ -1,8 +1,8 @@
 .data
-msg: .asciiz"Enter an integer number: ";
-pos: .asciiz"\nThis number is positive";
-neg: .asciiz"\nThis number is negative";
-zero: .asciiz"\nNeither positive nor negative";
+msg: .asciiz "Enter an integer number: ";
+pos: .asciiz "\nThis number is positive";
+neg: .asciiz "\nThis number is negative";
+zero: .asciiz "\nNeither positive nor negative";
 
 .text
 
@@ -14,9 +14,9 @@ syscall
 
 li $v0, 5
 syscall
-move $t0,$v0
+move $t0, $v0
 
-move $a0,$t0
+move $a0, $t0
 li $v0, 1
 syscall
 
